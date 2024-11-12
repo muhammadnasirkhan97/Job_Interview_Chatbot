@@ -4,7 +4,8 @@ import streamlit as st
 from groq import Groq
 
 # Initialize Groq client with the API key directly
-client = Groq(api_key="TOKEN_KEY")  # Replace with your Groq API key
+token = os.getenv("TOKEN_KEY")
+client = Groq(api_key=token)  # Replace with your Groq API key
 
 # Updated System prompt for Groq model
 system_prompt = """
